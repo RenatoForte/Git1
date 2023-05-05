@@ -23,13 +23,9 @@ will have on the second day, if he makes the most of the offer.
 */
 package Git1;
 
-import java.util.Scanner;
-
 public class Questao2 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int t = sc.nextInt(); // número de casos de teste
+        public double conteudoGarrafas(int t){
 
         for (int i = 0; i < t; i++) {
             int n = sc.nextInt(); // número de refrigerantes comprados
@@ -43,6 +39,7 @@ public class Questao2 {
                 int exchangedBottles = emptyBottles / k;
                 totalBottles += exchangedBottles;
                 emptyBottles = exchangedBottles + (emptyBottles % k);
+                reutrn t
             }
 
             System.out.println(totalBottles);
