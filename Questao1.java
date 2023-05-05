@@ -16,3 +16,24 @@
 // >> Output
 // Print one row, containing the statement "Farei hoje!" if it's possible to
 // manufacture both gifts before the time to go away, or "Deixa para amanha!" otherwise.
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        if (a + b <= n) {
+            System.out.println("Farei hoje!");
+        } else {
+            System.out.println("Deixa para amanha!");
+        }
+
+        sc.close();
+    }
+}
