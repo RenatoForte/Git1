@@ -24,27 +24,17 @@ will have on the second day, if he makes the most of the offer.
 package Git1;
 
 public class Questao2 {
-    public static void main(String[] args) {
-        public double conteudoGarrafas(int t){
+    public static int conteudoGarrafas(int n, int k) {
+        int totalBottles = n; // total de garrafas no primeiro dia
+        int emptyBottles = n; // garrafas vazias no primeiro dia
 
-        for (int i = 0; i < t; i++) {
-            int n = sc.nextInt(); // número de refrigerantes comprados
-            int k = sc.nextInt(); // número de garrafas vazias para trocar por uma cheia
-
-            int totalBottles = n; // total de garrafas no primeiro dia
-            int emptyBottles = n; // garrafas vazias no primeiro dia
-
-            while (emptyBottles >= k) {
-                // troca garrafas vazias por cheias
-                int exchangedBottles = emptyBottles / k;
-                totalBottles += exchangedBottles;
-                emptyBottles = exchangedBottles + (emptyBottles % k);
-                reutrn t
-            }
-
-            System.out.println(totalBottles);
+        while (emptyBottles >= k) {
+            // troca garrafas vazias por cheias
+            int exchangedBottles = emptyBottles / k;
+            totalBottles += exchangedBottles;
+            emptyBottles = exchangedBottles + (emptyBottles % k);
         }
 
-        sc.close();
+        return totalBottles;
     }
 }
