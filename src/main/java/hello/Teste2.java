@@ -1,30 +1,20 @@
-import org.junit.Test;
-import static org.junit.Assert.*;
-      
+package hello;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Teste2{
-    public static void main(String[] args) {
-      
-      //QUESTÃO 2
 
-    @Test
-    public void test1() {
-        int expected = 3;
-        int actual = Questao2.conteudoGarrafas(4, 3);
-        assertEquals(expected, actual);
+
+public class Teste2 {
+
+        //QUESTÃO 2
+
+        @Test
+        public void test1 () {
+            int expected = 1;
+            int garrafasCompradas = 10;
+            int custoTrocas = 3;
+            int dias = 1;
+            int sobrasGarrafas =Questao2.calculaTrocasGarrafas(garrafasCompradas,custoTrocas,dias);
+            assertEquals(expected, sobrasGarrafas);
+        }
     }
-
-    @Test
-    public void test2() {
-        int expected = 1;
-        int actual = Questao2.conteudoGarrafas(2, 2);
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void test3() {
-        int expected = 1000000000;
-        int actual = Questao2.conteudoGarrafas(1000000000, 1);
-        assertEquals(expected, actual);
-    }
-}

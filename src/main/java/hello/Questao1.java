@@ -1,4 +1,4 @@
-// The manufacturing of Christmas gifts is a very complicated task.
+package hello;// The manufacturing of Christmas gifts is a very complicated task.
 // Several times the leprechauns stay up late working so that everything
 // can be done in time and with perfection.
 // To better manage their schedule, the leprechauns stipulated how many
@@ -17,11 +17,15 @@
 // Print one row, containing the statement "Farei hoje!" if it's possible to
 // manufacture both gifts before the time to go away, or "Deixa para amanha!" otherwise.
 
-public class Questao1{
+public class Questao1 {
     public static void main(String[] args) {
-        
-public void boolean quandoFazer(int n, int a, int b ){
-    if (a + b <= n) {Return 1;} 
-    else { Return 2;}
+
+    }
+    public  int quandoFazer (int n, int a , int b ){
+        if (a + b <= n) {
+            return 1;
+        } else {
+            return 2;
+        }
     }
 }

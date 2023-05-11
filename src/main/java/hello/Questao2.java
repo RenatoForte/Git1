@@ -21,20 +21,31 @@ Output
 For each test case print the number of bottles that the customer 
 will have on the second day, if he makes the most of the offer.
 */
-package Git1;
+package hello;
 
 public class Questao2 {
-    public static int conteudoGarrafas(int n, int k) {
-        int totalBottles = n; // total de garrafas no primeiro dia
-        int emptyBottles = n; // garrafas vazias no primeiro dia
+    public static int calculaTrocasGarrafas(int garrafasVazias, int garrafasNecessariasParaTroca, int dias) {
+        int garrafasCheias = 0;
+        System.out.println("garrafasVazias: "+ garrafasVazias);
+        System.out.println("garrafasCheias: "+ garrafasCheias);
 
-        while (emptyBottles >= k) {
-            // troca garrafas vazias por cheias
-            int exchangedBottles = emptyBottles / k;
-            totalBottles += exchangedBottles;
-            emptyBottles = exchangedBottles + (emptyBottles % k);
+        for(int i = 1; i <= dias; i++){ // bebo as garrafas cheias
+            System.out.println("Indo ao mercado efetuar as trocas do dia " + i);
+            garrafasVazias += garrafasCheias;
+            garrafasCheias = 0;
+
+            while(garrafasVazias >= garrafasNecessariasParaTroca) {// vou pro mercado fazer as trocas
+                garrafasVazias -= garrafasNecessariasParaTroca;  //pago as garrafas vazias
+                garrafasCheias++; // pego as garrafas cheias
+                System.out.println("Efetuei uma troca, fiquei com " + garrafasVazias + " garrafas vazias");
+            }
+            System.out.println("Trocas do dia " + i);
+            System.out.println("garrafasVazias: "+ garrafasVazias);
+            System.out.println("garrafasCheias: "+ garrafasCheias);
         }
 
-        return totalBottles;
+            return garrafasVazias;
+
     }
 }
+
